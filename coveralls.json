@@ -1,0 +1,13 @@
+{
+  "skip_files": [
+    "lib/marleyspoon/application.ex",
+    "lib/marleyspoon_web.ex",
+    "lib/marleyspoon_web/telemetry.ex",
+    "lib/marleyspoon_web/endpoint.ex",
+    "lib/marleyspoon_web/router.ex",
+    "lib/marleyspoon_web/views/error_helpers.ex",
+    "lib/marleyspoon_web/views/layout_view.ex",
+    "lib/marleyspoon_web/live/recipe_live.ex",
+    "lib/marleyspoon_web/live/recipes_live.ex"
+  ]
+}
