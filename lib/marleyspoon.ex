@@ -48,11 +48,9 @@ defmodule Marleyspoon do
   defp collect_tags(nil, _), do: "N/A"
 
   defp collect_tags(tags, tags_info) do
-    tags
-    |> Enum.map(fn %{"sys" => %{"id" => id}} ->
+    Enum.map_join(tags, ", ", fn %{"sys" => %{"id" => id}} ->
       tags_info[id]
     end)
-    |> Enum.join(", ")
   end
 
   defp process_recipes(items, tags_info, chefs_info, images_info) do
