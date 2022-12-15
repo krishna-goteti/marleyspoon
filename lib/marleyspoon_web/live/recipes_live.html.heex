@@ -1,0 +1,20 @@
+<!-- Menu Modal -->
+<div id="recipes" class="w3-modal" style="display: block">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-display-container overflow: scroll">
+        <span onclick="document.getElementById('recipes').style.display='none'" class="w3-button w3-red w3-display-topright w3-large" style="z-index: 1">x</span>
+
+        <%= for recipe <- @recipes do %>
+            <div class="w3-panel w3-round-xlarge w3-margin w3-teal w3-padding-16" >
+                <div>
+                    <h1><%= recipe.title %></h1>
+                    <img style="width: 100%;" src={recipe.image} >
+                    <button phx-click="recipe", phx-value-recipe_id={recipe.recipe_id}>
+                      View Recipe
+                    </button>
+                </div>
+            </div>
+        <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div id="recipe" class="w3-modal" style="display: block">
+  <div class="w3-modal-content w3-animate-zoom">
+    <button class="w3-button w3-display-topright w3-large w3-red" style="z-index: 1" phx-click="recipes" onclick="document.getElementById('recipes').style.display='block'">Back</button>
+    <div class="w3-container w3-display-container">
+
+        <div class="w3-panel w3-round-xlarge w3-margin w3-teal w3-padding-16" >
+            <h1><%= @recipe.title %></h1>
+            <div class="w3-white w3-round-xlarge w3-margin w3-padding-16">
+                <p><b><b>Tags:</b></b> <%= @recipe.tags %></p>
+                <p><b><b>Description: </b></b><%= @recipe.description %></p>
+                <p><b><b>Chef Name: </b></b><%= @recipe.chef_name %></p>
+                <img style="width: 100%;" src={@recipe.image}>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
